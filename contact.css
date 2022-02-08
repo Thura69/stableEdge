@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
+*{
+    padding:0;margin:0;box-sizing: border-box;
+}
+:root{
+    --header-background-color :#222;
+    --header-img-width:100px;
+    --header-img-scale:2.5;
+    --header-2-color:#222;
+    --header-2-a-fz:15px;
+    --header-2-ls:4px;
+    --header-2-padding-tb:10px;
+    --header-2-padding-lr:42px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.header-1{
+    background-color:var(--header-background-color);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header-1 img{
+    height:var(--header-img-width);
+    transform: scale(var(--header-img-scale));
+}
+.menu{
+    display: none;
+    cursor: pointer;  
+}
+.menu-shower{
+    height: 100vh;
+    background-color: white;
+    display: none;
+    position: absolute;
+    left:0;right: 0;
+    z-index: 10;
+}
+.active{
+    display: initial;
+}
+.menu-shower ul{
+    text-align: center;
+}
+.menu-shower ul li a{
+    text-decoration: none;
+    color:black;
+    font-size:20px;
+    font-family: 'Roboto Slab', serif;
+}
+.menu-shower ul li{
+    margin-top:80px;
+}
+.line{
+    width:40px;
+    height:3px;
+    background-color: rgb(255, 255, 255);
+    margin:7px 0;
+    transition: all 0.5s ease;
+}
+.header-2{
+    background-color:var(--header-2-color);
+    text-align: center;
+    margin-top:0px;
+}
+.header-2 ul li a{
+    font-size:var(--header-2-a-fz);
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing:var(--header-2-ls);
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0 10px;
+    font-weight: 900;
+}
+/* .header-2 ul li:hover{
+    border:1px solid black;
+} */
+.header-2 ul li{
+    cursor: pointer;
+   padding:var(--header-2-padding-tb) var(--header-2-padding-lr);
+    display: inline-block;transition: all 0.7s ease;
+    margin:0 15px;
+
+}
+.header-2 ul li a:hover{
+    opacity:0.8;
+}
+
+.header-2 ul{
+    position: relative;
+    display: inline-block;
+}
+.life-line{
+    transition: all 0.5s ease;
+    width:80px;
+    height:5px;
+    background-color: rgb(252, 252, 252);
+    position:absolute;
+}
+body{
+    background-color: #222;
+    overflow: hidden;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:70vh
+}
+.contact a{
+    font-size:25px;
+    color:rgb(255, 250, 250);
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (max-width:850px){
+    .header-2{
+        display: none;
+    }
+    .menu{
+        display: initial;
+    }}
+
+@media screen and (max-width:450px){
+:root{
+ --header-background-color :#222;
+--header-img-width:65px;
+--header-img-scale:2;
+
+}}
